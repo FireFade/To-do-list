@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мій ToDo List</title>
+
+    <!-- Підключаємо єдиний CSS -->
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+<header class="header">
+    <h1 class="logo">Мій ToDo List</h1>
+    <nav class="nav">
+        <a href="index.html" class="nav-link">Головна</a>
+        <a href="about.html" class="nav-link">Про нас</a>
+        <!-- Кнопка "Увійти"/"Вийти" буде динамічною -->
+        <button id="auth-btn" class="auth-btn">Увійти</button>
+    </nav>
+</header>
+
+<main class="main-content">
+    <!-- Форма додавання нового завдання -->
+    <section class="add-task-section">
+        <input
+                type="text"
+                id="new-task-input"
+                class="new-task-input"
+                placeholder="Нове завдання…"
+        />
+        <select id="priority-select" class="priority-select">
+            <option value="low">Низький</option>
+            <option value="medium">Середній</option>
+            <option value="high">Високий</option>
+        </select>
+        <button id="add-task-btn" class="btn btn-primary">Додати</button>
+    </section>
+
+    <!-- Кнопки-фільтри -->
+    <section class="filter-section">
+        <button id="filter-all" class="btn btn-filter btn-active">Всі</button>
+        <button id="filter-active" class="btn btn-filter">Активні</button>
+        <button id="filter-completed" class="btn btn-filter">Виконані</button>
+    </section>
+
+    <!-- Список завдань -->
+    <section class="tasks-section">
+        <ul id="tasks-list" class="tasks-list"></ul>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>Роботу виконав студент групи КМ-23 Мацюк Віктор</p>
+</footer>
+
+<!-- Firebase (compat) -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<!-- Наш основний скрипт -->
+<script src="scripts/app.js"></script>
+</body>
+</html>
