@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Увійти / Зареєструватись — ToDo List</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/auth.css" />
+</head>
+<body>
+<header>
+    <h1>🔐 Увійти / Зареєструватись</h1>
+    <nav>
+        <a href="index.html">Головна</a>
+        <a href="about.html">Про нас</a>
+    </nav>
+</header>
+
+<main class="auth-container">
+    <div class="auth-box">
+        <!-- Форма Login -->
+        <div id="login-container" class="form-container">
+            <h2>Увійти</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="login-username">Логін</label>
+                    <input type="text" id="login-username" placeholder="Ваш логін" required />
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Пароль</label>
+                    <input type="password" id="login-password" placeholder="Пароль" required />
+                </div>
+                <button type="submit" class="btn-primary">Увійти</button>
+            </form>
+            <p class="switch-text">
+                Ще немає акаунту?
+                <a href="#" id="show-register">Зареєструватись</a>
+            </p>
+        </div>
+
+        <!-- Форма Register -->
+        <div id="register-container" class="form-container" style="display: none;">
+            <h2>Зареєструватись</h2>
+            <form id="register-form">
+                <div class="input-group">
+                    <label for="register-username">Логін</label>
+                    <input type="text" id="register-username" placeholder="Ваш логін" required />
+                </div>
+                <div class="input-group">
+                    <label for="register-password">Пароль</label>
+                    <input type="password" id="register-password" placeholder="Пароль" required />
+                </div>
+                <button type="submit" class="btn-primary">Зареєструватись</button>
+            </form>
+            <p class="switch-text">
+                Вже є акаунт?
+                <a href="#" id="show-login">Увійти</a>
+            </p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>Роботу виконав студент групи КМ-23 Мацюк Віктор</p>
+</footer>
+
+<!-- Firebase SDK -->
+<script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script>
+<!-- Наш власний auth.js -->
+<script type="module" src="scripts/auth.js"></script>
+</body>
+</html>

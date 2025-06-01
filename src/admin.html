@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Панель Адміністратора</title>
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+<header>
+    <h1>Користувачі</h1>
+    <nav>
+        <button id="logout-btn">Вийти</button>
+    </nav>
+</header>
+
+<main class="admin-container">
+    <!-- Тут admin.js вставляє список користувачів -->
+    <ul id="users-list" class="users-list"></ul>
+</main>
+
+<!-- Модальне вікно для редагування завдань обраного користувача -->
+<div class="edit-tasks-modal" id="edit-tasks-modal" style="display: none;">
+    <div class="modal-content">
+        <button class="close-modal" id="close-modal-btn">&times;</button>
+        <h3>Редагувати завдання</h3>
+        <div id="tasks-modal-list"></div>
+    </div>
+</div>
+
+<footer>
+    <p>Роботу виконав студент групи КМ-23 Мацюк Віктор</p>
+</footer>
+
+<!-- Firebase-скрипти (compat) -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+<!-- Оновлений скрипт адмінки -->
+<script src="scripts/admin.js"></script>
+</body>
+</html>
